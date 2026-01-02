@@ -1,0 +1,27 @@
+{
+  "name": "meu-app",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w mobile",
+    "test": "npm run test --workspaces",
+    "lint": "eslint . --ext .ts,.tsx",
+    "type-check": "tsc --build",
+    "prisma:generate": "npm run prisma:generate -w infrastructure",
+    "prisma:migrate": "npm run prisma:migrate -w infrastructure",
+    "prisma:studio": "npm run prisma:studio -w infrastructure"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  }
+}

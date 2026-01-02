@@ -1,0 +1,25 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "composite": true,
+    "strict": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "paths": {
+      "@meu-app/domain": ["../domain/src"],
+      "@meu-app/application": ["../application/src"],
+      "@meu-app/infrastructure": ["../infrastructure/src"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+  ],
+  "references": [
+    { "path": "../domain" },
+    { "path": "../application" },
+    { "path": "../infrastructure" }
+  ]
+}
