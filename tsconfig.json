@@ -22,6 +22,6 @@
     { "path": "./packages/domain" },
     { "path": "./packages/application" },
     { "path": "./packages/infrastructure" },    
-    { "path": "./shared" }
+    { "path": "./packages/shared" }
   ]
 }
